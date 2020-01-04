@@ -4,7 +4,7 @@
     const res = await api.getItems('home',{
       fields: '*.*,background.data'
     })
-    return {home: res?.data[0]}
+    return {home: res.data[0]}
   }
 </script>
 <script>
