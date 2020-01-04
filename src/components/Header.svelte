@@ -1,0 +1,75 @@
+<script>
+  export let segment;
+  import {isMenuOpened} from '../store'
+  let headerClass = 'animate mobile-menu-hide'
+  $: $isMenuOpened ? headerClass = 'animate' : headerClass = 'animate mobile-menu-hide'
+  const toggleSidebar = function(){
+    isMenuOpened.update(val=> val = !val)
+  }
+</script>
+<!-- Header -->
+<header id="site_header" class="header {headerClass}">
+  <div class="header-content clearfix">
+    <div class="my-photo">
+      <img src="https://api.chz.dev/uploads/_/originals/logo.png" alt="image">
+    </div>
+
+    <div class="site-title-block">
+      <div class="site-title">CHZ.DEV</div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="site-nav">
+      <!-- Main menu -->
+      <ul id="nav" class="site-main-menu">
+        <li>
+          <a class='{segment === undefined ? "selected" : ""}' href=".">Home</a>
+        </li>
+        <li>
+          <a rel=prefetch class='{segment === 'about' ? "selected" : ""}' href="about">About Me</a>
+        </li>
+        <li>
+          <a rel=prefetch class='{segment === 'resume' ? "selected" : ""}' href="resume">Resume</a>
+        </li>
+        <li>
+          <a rel=prefetch class='{segment === 'portfolio' ? "selected" : ""}' href="portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a rel=prefetch class='{segment === 'contact' ? "selected" : ""}' href="contact">Contact</a>
+        </li>
+      </ul>
+      <!-- /Main menu -->
+    </div>
+    <!-- Navigation -->
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="javascript:void(0)" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="javascript:void(0)" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="javascript:void(0)" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <!-- / Social Links -->
+
+    <!-- Copyrights -->
+    <div class="copyrights">© 2018 All rights reserved.</div>
+    <!-- / Copyrights -->
+  </div>
+</header>
+<!-- /Header -->
+
+<!-- Mobile Header -->
+<div class="mobile-header mobile-visible">
+  <div class="mobile-logo-container">
+    <div class="mobile-header-image">
+      <a href="javascript:void(0)">
+        <img src="images/photo.jpg" alt="image">
+      </a>
+    </div>
+    <div class="mobile-site-title"><a href="/">CHZ.DEV</a></div>
+  </div>
+
+  <a href="javascript:void(0)" on:click={toggleSidebar} class="menu-toggle mobile-visible">
+    <i class="fa fa-bars" />
+  </a>
+</div>
+<!-- /Mobile Header -->
