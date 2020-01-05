@@ -60,3 +60,11 @@
     </div>
   </div>
 </section>
+<style>
+  .dark {
+    color:#333!important;
+  }
+  .lm-info-block {
+    padding: 90px 10px 85px;
+  }
+</style>

@@ -1,0 +1,94 @@
+
+Chingiz Mammadov
+
+11 Ziya Bünyadov
+Baku 
+Cell: +994508998855
+E-Mail: info@chz.dev
+
+Professional Summary
+
+I'm a creative Front end Engineer with 7+ years of professional experience.
+
+I develop compelling designs that spring to life using transition and animations that suit my clients, using the most sophisticated technologies available today for fully interactive and responsive websites.
+
+Experience
+
+November 2018 to Current
+Competo MMC (Pasha Holding) Baku, Azerbaijan
+Lead / Senior Frontend Engineer    
+
+Client/Admin interface (VueJS/Vuex/Nuxt)
+Web development using HTML5/CSS3/JavaScript
+SPA development using Vue/Vuex/Nuxt/Babel/ Webpack
+
+September 2018 to November 2018
+DOTCOM MMC Baku, Azerbaijan
+Senior Frontend Engineer    
+
+Client/Admin interface (VueJs/Vuex)
+Web development using
+HTML/CSS/jQuery/JavaScript
+SPA development using AngularJs,VueJs
+
+May 2017 to September 2018
+BUGLANCE DMCC Baku, Azerbaijan
+Senior Frontend Engineer    
+
+Client/Admin interface (AngularJS, VueJs/Vuex)
+Web development using
+HTML/CSS/jQuery/JavaScript
+SPA development using AngularJS,VueJs
+
+October 2012 to May 2017
+SAFAROFF CREATIVE AGENCY Baku, Azerbaijan
+Senior Frontend Developer    
+
+Developing website and landing page
+Web development using HTML/CSS/JS/PHP
+SPA development using (AngularJS)
+Responsive layout (Flexbox, Grid, Bootstrap, media queries)
+
+November 2011 to April 2012
+DREAMART - DESIGN & ADVERTISING Baku, Azerbaijan
+Frontend Developer    
+
+Developing website and landing page
+Web development using HTML/CSS/jQuery/JavaScript
+Layout of animated banners
+Responsive layout (Bootstrap, media queries)
+
+      Skills
+
+      HTML5/Pug
+
+      CSS/Sass/Less
+
+      Gulp/Grunt
+
+      Git/Svn
+
+      Javascript
+
+      Svelte/Sapper
+
+      VueJs/Vuex/NuxtJs
+
+      ReactJs/Redux
+
+Languages
+
+Azerbaijani: Native Language
+Turkish: Fluent Level
+Russian: Conversational Level
+English:  Conversational Level
+
+Contacts
+
+Website: https://chz.dev
+Email: info@chz.dev
+Skype: chingizrm
+Phone: +994508998855
+Linkedin: https://www.linkedin.com/in/chingiz-mammadov/
+GitHub: https://github.com/chz
+

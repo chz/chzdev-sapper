@@ -10,8 +10,15 @@
     <ul class="info-list">
       {#each me as item}
         <li><span class="title">{item.title}</span>
-        <span class="value">{item.value}</span></li> 
+        <span class="value">{item.value}</span></li>
       {/each}
     </ul>
   </div>
 </div>
+<style>
+  :global(.about-content img) {
+    float: left;
+    width: 207px;
+    margin-right: 20px;
+  }
+</style>

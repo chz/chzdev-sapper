@@ -28,7 +28,7 @@
     <!-- / Social Links -->
 
     <!-- Copyrights -->
-    <div class="copyrights">© 2018 All rights reserved.</div>
+    <div class="copyrights">© 2020 All rights reserved.</div>
     <!-- / Copyrights -->
   </div>
 </header>
@@ -39,7 +39,7 @@
   <div class="mobile-logo-container">
     <div class="mobile-header-image">
       <a href="javascript:void(0)">
-        <img src="images/photo.jpg" alt="image">
+        <img src="https://api.chz.dev/uploads/_/originals/logo.png" alt="image">
       </a>
     </div>
     <div class="mobile-site-title"><a href="/">CHZ.DEV</a></div>

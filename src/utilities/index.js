@@ -51,7 +51,7 @@ export const array_chunk = (input, size, preserveKeys) => {
   return n
 };
 export const shuffle = array => array.sort(() => Math.random() - 0.5);
-export const fadeIn = (node, {targets, duration, delay = 0})  => ({
+export const fadeIn = (node, {duration, delay = 0})  => ({
   css: t => anime({
     targets:node,
     duration,
@@ -61,7 +61,7 @@ export const fadeIn = (node, {targets, duration, delay = 0})  => ({
     delay
   })
 });
-export const fadeOut = (node, {targets, duration, delay = 0}) => ({
+export const fadeOut = (node, {duration, delay = 0}) => ({
   css: t => anime({
     targets:node,
     duration,
