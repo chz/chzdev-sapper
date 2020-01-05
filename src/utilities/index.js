@@ -66,7 +66,8 @@ export const fadeOut = (node, {targets, duration, delay = 0}) => ({
     targets:node,
     duration,
     easing: "linear",
-    translateY: [0,100],
+    translateY: [0,0],
+    scale:[1,0.8],
     opacity: [1,0],
     delay
   })

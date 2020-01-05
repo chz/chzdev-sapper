@@ -16,6 +16,27 @@
   import { fadeIn, fadeOut } from "../../utilities";
   import PortfolioItem from '../../components/Portfolio/PortfolioItem.svelte'
   $: filterPortfolios = selectedFilter ? portfolios.filter(portfolio => portfolio.category === selectedFilter) : portfolios
+
+  import { quintOut } from 'svelte/easing';
+  import { crossfade } from 'svelte/transition';
+  import { flip } from 'svelte/animate';
+  const [send, receive] = crossfade({
+    duration: d => Math.sqrt(d * 200),
+
+    fallback(node, params) {
+      const style = getComputedStyle(node);
+      const transform = style.transform === 'none' ? '' : style.transform;
+
+      return {
+        duration: 600,
+        easing: quintOut,
+        css: t => `
+					transform: ${transform} scale(${t});
+					opacity: ${t}
+				`
+      };
+    }
+  });
 </script>
 <svelte:head>
   <title>Portfolio | CHZ.DEV - Chingiz Mammadov - Front End Engineer</title>
@@ -44,8 +65,10 @@
             </ul>
             <!-- Portfolio Grid-->
             <div class="portfolio-grid three-columns">
-              {#each filterPortfolios as portfolio}
-                <PortfolioItem {portfolio}/>
+              {#each filterPortfolios as portfolio (portfolio.slug)}
+                <div in:receive="{{key: portfolio.slug}}" out:send="{{key: portfolio.slug}}" animate:flip>
+                  <PortfolioItem {portfolio}/>
+                </div>
               {:else}
                 <div class="NotFound">Nothing found</div>
               {/each}

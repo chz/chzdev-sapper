@@ -5,12 +5,11 @@
   import { goto, stores } from '@sapper/app';
   import {isMenuOpened} from '../store'
   const { page, preloading, session } = stores();
-
+  let width = 50;
   page.subscribe(({ path, params, query }) => {
     isMenuOpened.update(()=> false)
   })
 </script>
-<!--<Nav {segment}/>-->
 <div id="page" class="page">
   <Header {segment} />
   <!-- Main Content -->
