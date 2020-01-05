@@ -12,6 +12,7 @@
     "@directus/sdk-js": "^6.0.0",
     "compression": "^1.7.4",
     "polka": "next",
+    "siema": "^1.5.1",
     "sirv": "^0.4.2"
   },
   "devDependencies": {

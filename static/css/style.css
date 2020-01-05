@@ -10,3 +10,16 @@
 .dark {
   color:#333!important;
 }
+
+.ajax-page-wrapper {
+  max-width: 100%;
+}
+
+.ajax-page-nav>div.nav-item a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  color: #888;
+  background-color: #eee;
+}

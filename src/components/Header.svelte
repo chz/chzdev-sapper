@@ -1,6 +1,7 @@
 <script>
   export let segment;
   import {isMenuOpened} from '../store'
+  import Nav from './Nav.svelte'
   let headerClass = 'animate mobile-menu-hide'
   $: $isMenuOpened ? headerClass = 'animate' : headerClass = 'animate mobile-menu-hide'
   const toggleSidebar = function(){
@@ -17,31 +18,7 @@
     <div class="site-title-block">
       <div class="site-title">CHZ.DEV</div>
     </div>
-
-    <!-- Navigation -->
-    <div class="site-nav">
-      <!-- Main menu -->
-      <ul id="nav" class="site-main-menu">
-        <li>
-          <a class='{segment === undefined ? "selected" : ""}' href=".">Home</a>
-        </li>
-        <li>
-          <a rel=prefetch class='{segment === 'about' ? "selected" : ""}' href="about">About Me</a>
-        </li>
-        <li>
-          <a rel=prefetch class='{segment === 'resume' ? "selected" : ""}' href="resume">Resume</a>
-        </li>
-        <li>
-          <a rel=prefetch class='{segment === 'portfolio' ? "selected" : ""}' href="portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a rel=prefetch class='{segment === 'contact' ? "selected" : ""}' href="contact">Contact</a>
-        </li>
-      </ul>
-      <!-- /Main menu -->
-    </div>
-    <!-- Navigation -->
-
+    <Nav {segment}/>
     <!-- Social Links -->
     <div class="social-links">
       <a href="javascript:void(0)" target="_blank"><i class="fab fa-twitter"></i></a>
