@@ -10,16 +10,16 @@
 			<a class='{segment === undefined ? "selected" : ""}' href=".">Home</a>
 		</li>
 		<li>
-			<a rel=prefetch class='{segment === 'about' ? "selected" : ""}' href="about">About</a>
+			<a rel="prefetch" class='{segment === "about" ? "selected" : ""}' href="about">About</a>
 		</li>
 		<li>
-			<a rel=prefetch class='{segment === 'resume' ? "selected" : ""}' href="resume">Resume</a>
+			<a rel="prefetch" class='{segment === "resume" ? "selected" : ""}' href="resume">Resume</a>
 		</li>
 		<li>
-			<a rel=prefetch class='{segment === 'portfolio' ? "selected" : ""}' href="portfolio">Portfolio</a>
+			<a rel="prefetch" class='{segment === "portfolio" ? "selected" : ""}' href="portfolio">Portfolio</a>
 		</li>
 		<li>
-			<a rel=prefetch class='{segment === 'contact' ? "selected" : ""}' href="contact">Contact</a>
+			<a rel="prefetch" class='{segment === "contact" ? "selected" : ""}' href="contact">Contact</a>
 		</li>
 	</ul>
 	<!-- /Main menu -->

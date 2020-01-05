@@ -3,7 +3,7 @@
 	import Siema from 'siema'
 	import { onMount } from 'svelte'
 	import { createEventDispatcher } from 'svelte';
-	
+
 	export let perPage = 3
 	export let loop = true
 	export let autoplay = 0
@@ -27,7 +27,7 @@
 				activeSlide = this.currentSlide
 			}
 		})
-		
+
 		autoplay && setInterval(right, autoplay)
 
 		return () => {
@@ -35,11 +35,11 @@
 			controller.destroy()
 		}
 	})
-	
+
 	function left () {
 		controller.prev()
 	}
-	
+
 	function right () {
 		controller.next()
 	}
@@ -50,10 +50,10 @@
 </script>
 <div class="carousel">
 	<button class="left" on:click={left}>
-		<slot name="left-control"></slot>
+		<slot name="left-control"/>
 	</button>
 	<div class="slides" bind:this={siema}>
-		<slot></slot>
+		<slot/>
 	</div>
 	<ul>
 		{#each pips as pip, i}
@@ -61,7 +61,7 @@
 		{/each}
 	</ul>
 	<button class="right" on:click={right}>
-		<slot name="right-control"></slot>
+		<slot name="right-control"/>
 	</button>
 </div>
 
@@ -72,7 +72,7 @@
 		justify-content: center;
 		align-items: center;
 	}
-	
+
 	button {
 		position: absolute;
 		width: 40px;
@@ -87,11 +87,11 @@
   button:focus {
     outline: none;
   }
-	
+
 	.left {
 		left: 2vw;
 	}
-	
+
 	.right {
 		right: 2vw;
 	}

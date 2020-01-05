@@ -60,6 +60,9 @@
                   <img src={image} alt="">
                 </div>
               {/each}
+              <div slot="right-control">
+                asas
+              </div>
             </Carousel>
           {/if}
         </div>
@@ -85,7 +88,7 @@
                 {@html portfolio.description}
                </div>
             {/if}
-            
+
             <!-- /Project Description-->
             {#if portfolio.technology.length}
             <!-- Technology-->

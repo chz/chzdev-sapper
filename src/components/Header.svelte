@@ -2,9 +2,9 @@
   export let segment;
   import {isMenuOpened} from '../store'
   import Nav from './Nav.svelte'
-  let headerClass = 'animate mobile-menu-hide'
+  let headerClass
   $: $isMenuOpened ? headerClass = 'animate' : headerClass = 'animate mobile-menu-hide'
-  const toggleSidebar = function(){
+  const toggleSidebar = () => {
     isMenuOpened.update(val=> val = !val)
   }
 </script>
@@ -46,7 +46,7 @@
   </div>
 
   <a href="javascript:void(0)" on:click={toggleSidebar} class="menu-toggle mobile-visible">
-    <i class="fa fa-bars" />
+    <i class="fa fa-bars"></i>
   </a>
 </div>
 <!-- /Mobile Header -->
