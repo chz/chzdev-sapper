@@ -1,4 +1,4 @@
-import { sineOut } from "svelte/easing";
+import anime from "animejs/lib/anime.es.js";
 export const array_chunk = (input, size, preserveKeys) => {
   let x;
   let p = '';
@@ -51,18 +51,23 @@ export const array_chunk = (input, size, preserveKeys) => {
   return n
 };
 export const shuffle = array => array.sort(() => Math.random() - 0.5);
-let duration = 250;
-let delay = duration;
-let delayZero = 0;
-export const fadeIn = _ => ({
-  duration,
-  delay,
-  easing: sineOut,
-  css: t => `opacity: ${t}`
+export const fadeIn = (node, {targets, duration, delay = 0})  => ({
+  css: t => anime({
+    targets:node,
+    duration,
+    easing: "linear",
+    translateY: [100,0],
+    opacity:[0,1],
+    delay
+  })
 });
-export const fadeOut = _ => ({
-  duration,
-  delayZero,
-  easing: sineOut,
-  css: t => `opacity: ${t}`
+export const fadeOut = (node, {targets, duration, delay = 0}) => ({
+  css: t => anime({
+    targets:node,
+    duration,
+    easing: "linear",
+    translateY: [0,100],
+    opacity: [1,0],
+    delay
+  })
 });

@@ -19,6 +19,7 @@
 <script>
   export let portfolio
   import Carousel from '../../components/Carousel.svelte'
+  import { fadeIn, fadeOut } from "../../utilities";
   const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
@@ -38,7 +39,7 @@
 <svelte:head>
   <title>{`${portfolio.title} | CHZ.DEV - Chingiz Mammadov - Front End Engineer`}</title>
 </svelte:head>
-<div class="pt-page pt-page-home pt-page-current">
+<div class="pt-page pt-page-home pt-page-current" in:fadeIn="{{ duration: 400,delay: 400 }}" out:fadeOut="{{ duration: 400 }}">
   <div class="ajax-page-content">
     <article class="ajax-page-wrapper">
       <div class="ajax-page-nav">
@@ -60,9 +61,6 @@
                   <img src={image} alt="">
                 </div>
               {/each}
-              <div slot="right-control">
-                asas
-              </div>
             </Carousel>
           {/if}
         </div>

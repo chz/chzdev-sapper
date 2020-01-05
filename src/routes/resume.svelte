@@ -14,12 +14,13 @@
 <script>
   import Experience from '../components/Resume/Experience.svelte'
   import Skills from '../components/Resume/Skills.svelte'
+  import { fadeIn, fadeOut } from "../utilities";
   export let title,slogan,cv,experience,skills;
 </script>
 <svelte:head>
   <title>Resume | CHZ.DEV - Chingiz Mammadov - Front End Engineer</title>
 </svelte:head>
-<section class="pt-page pt-page-home pt-page-current">
+<section class="pt-page pt-page-home pt-page-current" in:fadeIn="{{ duration: 400,delay: 400 }}" out:fadeOut="{{ duration: 400 }}">
   <div class="section-inner custom-page-content">
     <div class="section-content">
       <div class="section-title-block second-style">

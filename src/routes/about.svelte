@@ -26,7 +26,7 @@
 <svelte:head>
 	<title>About | CHZ.DEV - Chingiz Mammadov - Front End Engineer / Full Stack Developer</title>
 </svelte:head>
-<section class="pt-page pt-page-current" in:fadeIn out:fadeOut>
+<section class="pt-page pt-page-current" in:fadeIn="{{ duration: 400,delay: 400 }}" out:fadeOut="{{ duration: 400 }}">
   <div class="section-inner custom-page-content">
     <div class="section-title-block second-style">
       <h2 class="section-title">{title}</h2>

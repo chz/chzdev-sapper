@@ -13,13 +13,14 @@
 <script>
   export let portfolios;
   let selectedFilter = '';
+  import { fadeIn, fadeOut } from "../../utilities";
   import PortfolioItem from '../../components/Portfolio/PortfolioItem.svelte'
   $: filterPortfolios = selectedFilter ? portfolios.filter(portfolio => portfolio.category === selectedFilter) : portfolios
 </script>
 <svelte:head>
   <title>Portfolio | CHZ.DEV - Chingiz Mammadov - Front End Engineer</title>
 </svelte:head>
-<section class="pt-page pt-page-home pt-page-current">
+<section class="pt-page pt-page-home pt-page-current" in:fadeIn="{{ duration: 400,delay: 400 }}" out:fadeOut="{{ duration: 400 }}">
   <div class="section-inner custom-page-content">
     <div class="section-content">
       <div class="section-title-block second-style">

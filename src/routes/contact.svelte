@@ -9,12 +9,13 @@
 </script>
 <script>
   export let contact;
+  import { fadeIn, fadeOut } from "../utilities";
   let freelance = contact.freelance_available ? 'lnr-checkmark-circle' : 'lnr-cross-circle'
 </script>
 <svelte:head>
   <title>Contact | CHZ.DEV - Chingiz Mammadov - Front End Engineer</title>
-</svelte:head> 
-<section class="pt-page pt-page-home pt-page-current">
+</svelte:head>
+<section class="pt-page pt-page-home pt-page-current" in:fadeIn="{{ duration: 400,delay: 400 }}" out:fadeOut="{{ duration: 400 }}">
   <div class="section-inner custom-page-content">
     <div class="section-content">
       <div class="section-title-block second-style">
@@ -39,7 +40,7 @@
           </div>
         </div>
       </div>
-    {/if}  
+    {/if}
     {#if contact.email}
       <div class="col-xs-12 col-sm-6">
         <div class="col-inner bs-30">
@@ -48,7 +49,7 @@
           </div>
         </div>
       </div>
-    {/if}  
+    {/if}
       <div class="col-xs-12 col-sm-6">
         <div class="col-inner bs-30">
           <div class="lm-info-block gray-default"><i class="lnr {freelance}"></i>
