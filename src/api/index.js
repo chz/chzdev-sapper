@@ -1,6 +1,1 @@
-import DirectusSDK from "@directus/sdk-js";
-const client = new DirectusSDK({
-  url: "https://api.chz.dev",
-  project: "api",
-});
-export default client;
+export const ApiUrl = 'https://api.chz.dev/api/v1'

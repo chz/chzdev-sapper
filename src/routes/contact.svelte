@@ -1,9 +1,10 @@
 <script context="module">
-  import api from '../api'
+  import {ApiUrl} from '../api'
   export async function preload(){
-     const res = await api.getItems('contact')
+     const response = await this.fetch(`${ApiUrl}/contact`)
+     const contact = await response.json()
       return {
-        contact: res.data[0],
+        contact
       }
   }
 </script>

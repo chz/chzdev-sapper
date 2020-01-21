@@ -12,7 +12,7 @@
 <header id="site_header" class="header {headerClass}">
   <div class="header-content clearfix">
     <div class="my-photo">
-      <img src="https://api.chz.dev/uploads/_/originals/logo.png" alt="image">
+      <img src="/logo.png" alt="image">
     </div>
 
     <div class="site-title-block">
@@ -39,7 +39,7 @@
   <div class="mobile-logo-container">
     <div class="mobile-header-image">
       <a href="javascript:void(0)">
-        <img src="https://api.chz.dev/uploads/_/originals/logo.png" alt="image">
+        <img src="/logo.png" alt="image">
       </a>
     </div>
     <div class="mobile-site-title"><a href="/">CHZ.DEV</a></div>

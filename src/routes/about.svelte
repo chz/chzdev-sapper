@@ -1,18 +1,17 @@
 <script context="module">
-  import api from '../api'
+  import {ApiUrl} from '../api'
   export async function preload(){
-    const res = await api.getItems('about',{
-      fields: '*.*,clients.file_id.*.*'
-    })
+    const response = await this.fetch(`${ApiUrl}/about`)
+    const about = await response.json()
     return {
-      title: res.data[0].title,
-      slogan: res.data[0].slogan,
-      content: res.data[0].content || [],
-      what_i_do_services: res.data[0].what_i_do_services || [],
-      what_i_do_title: res.data[0].what_i_do_title || 'What I Do',
-      facts: res.data[0].fun_facts || [],
-      facts_title: res.data[0].fun_facts_title || 'Fun Facts',
-      me: res.data[0].me || [],
+      title: about.title,
+      slogan: about.slogan,
+      content: about.description || [],
+      what_i_do_services: about.what_i_do_services || [],
+      what_i_do_title: about.what_i_do_title || 'What I Do',
+      facts: about.fun_facts || [],
+      facts_title: about.fun_facts_title || 'Fun Facts',
+      me: about.me || [],
     }
   }
 </script>

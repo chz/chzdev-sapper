@@ -1,8 +1,8 @@
 <script>
   export let skills,cv;
-  let design = skills.filter(skill => skill.type === 1)
-  let pattern = skills.filter(skill => skill.type === 2)
-  let development = skills.filter(skill => skill.type === 0)
+  let design = skills.filter(skill => skill.type === '1')
+  let pattern = skills.filter(skill => skill.type === '2')
+  let development = skills.filter(skill => skill.type === '0')
 </script>
 <div class="col-xs-12 col-sm-5">
   <div class="row">

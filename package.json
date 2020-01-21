@@ -9,7 +9,6 @@
     "start": "node __sapper__/build"
   },
   "dependencies": {
-    "@directus/sdk-js": "^6.0.0",
     "animejs": "^3.1.0",
     "compression": "^1.7.4",
     "polka": "next",

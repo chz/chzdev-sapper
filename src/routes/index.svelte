@@ -1,10 +1,9 @@
 <script context="module">
-  import api from '../api';
+  import {ApiUrl} from '../api'
   export async function preload(){
-    const res = await api.getItems('home',{
-      fields: '*.*,background.data'
-    })
-    return {home: res.data[0]}
+    const response = await this.fetch(`${ApiUrl}/home`)
+    const home = await response.json();
+    return {home}
   }
 </script>
 <script>
@@ -12,7 +11,7 @@
   export let home;
   let title = home && home.title || '';
   let slogan = home && home.slogan || '';
-  let bg = home && home.background && home.background.data.full_url || ''
+  let bg = home && home.background || ''
   let isVisible = true;
 </script>
 <svelte:head>

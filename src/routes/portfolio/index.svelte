@@ -1,12 +1,11 @@
 <script context="module">
-  import api from '../../api'
+  import {ApiUrl} from '../../api'
   import {shuffle} from '../../utilities/index'
   export async function preload(){
-      const res = await api.getItems('portfolio',{
-        fields: '*.*,cover'
-      })
+      const response = await this.fetch(`${ApiUrl}/portfolio`)
+      const portfolios = await response.json()
       return {
-        portfolios: shuffle(res.data)
+        portfolios: shuffle(portfolios)
       }
     }
 </script>
@@ -56,11 +55,14 @@
               <li class="{selectedFilter === '' ? 'active':''}">
                 <a href="javascript:void(0)" class="filter btn btn-sm btn-link" on:click="{()=>{selectedFilter = ''}}">All</a>
               </li>
-              <li class="{selectedFilter === 'personal' ? 'active':''}">
-                <a href="javascript:void(0)" class="filter btn btn-sm btn-link" on:click="{()=>{selectedFilter = 'personal'}}">PERSONAL</a>
+              <li class="{selectedFilter === 'PERSONAL' ? 'active':''}">
+                <a href="javascript:void(0)" class="filter btn btn-sm btn-link" on:click="{()=>{selectedFilter = 'PERSONAL'}}">PERSONAL</a>
               </li>
-              <li class="{selectedFilter === 'safaroff' ? 'active':''}">
-                <a href="javascript:void(0)" class="filter btn btn-sm btn-link" on:click="{()=>{selectedFilter = 'safaroff'}}">SAFAROFF</a>
+              <li class="{selectedFilter === 'SAFAROFF' ? 'active':''}">
+                <a href="javascript:void(0)" class="filter btn btn-sm btn-link" on:click="{()=>{selectedFilter = 'SAFAROFFF'}}">SAFAROFF</a>
+              </li>
+              <li class="{selectedFilter === 'ENDORPHIN' ? 'active':''}">
+                <a href="javascript:void(0)" class="filter btn btn-sm btn-link" on:click="{()=>{selectedFilter = 'ENDORPHIN'}}">ENDORPHIN</a>
               </li>
             </ul>
             <!-- Portfolio Grid-->

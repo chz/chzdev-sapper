@@ -1,13 +1,14 @@
 <script context="module">
-  import api from '../api'
+  import {ApiUrl} from '../api'
   export async function preload(){
-    const res = await api.getItems('resume')
+    const response = await this.fetch(`${ApiUrl}/resume`)
+    const resume = await response.json()
       return {
-        title: res.data[0].title || '',
-        slogan: res.data[0].slogan || '',
-        cv: res.data[0].cv || '',
-        experience: res.data[0].experience || [],
-        skills: res.data[0].skills || []
+        title: resume.title || '',
+        slogan: resume.slogan || '',
+        cv: resume.cv || '',
+        experience: resume.experience || [],
+        skills: resume.skills || []
       }
   }
 </script>
